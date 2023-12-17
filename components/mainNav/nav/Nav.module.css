@@ -1,0 +1,177 @@
+.up {
+    background-color: var(--color-light-1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.nav {
+    height: 10dvh;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .logo img {
+    height: 7dvh;
+}
+
+
+.nav>ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav>ul li,
+.nav>ul li a,
+.nav>ul li a div,
+.nav>ul li button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.45rem;
+    text-decoration: none;
+}
+
+.nav>ul li span {
+    width: 1px;
+    height: 2rem;
+    background-color: var(--color-dark-2);
+}
+
+.nav>ul li button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+li div.cart {
+    position: relative;
+}
+
+.numProductOfCart {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-light-1) !important;
+    font-size: 1.3rem !important;
+    line-height: 0;
+    background-color: var(--color-blue-1);
+}
+
+.iconShowAside {
+    font-size: 3rem;
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconShowAside p {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* --------------- */
+.userName {
+    position: relative;
+}
+
+.userName .pop {
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 1111;
+    background-color: var(--color-light-1);
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-dark-2);
+    box-shadow: var(--box-shadow-1);
+    overflow: hidden;
+}
+
+.userName .pop ul {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.userName .pop ul li a,
+.userName .pop ul li button {
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.userName .pop ul li:hover {
+    background-color: var(--color-main-3);
+}
+
+.userName .nameUp {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.userName .nameUp p {
+    text-transform: capitalize;
+}
+
+.iconEdit {
+    color: var(--color-main-1);
+    font-size: 1.9rem;
+}
+
+.flagImage {
+    width: 2.2rem;
+}
+
+/* --------------- */
+
+@media (max-width: 45rem) {
+
+    .nav ul li:not(:last-of-type),
+    .nav>ul li p {
+        display: none;
+    }
+
+    .nav ul li .numProductOfCart p {
+        display: block;
+    }
+
+    .nav .search {
+        width: 100%;
+    }
+
+    .nav ul li .cart .iconEdit {
+        font-size: 2.5rem;
+    }
+
+    .iconShowAside {
+        display: flex;
+    }
+
+    .nav>ul>li {
+        padding: 0.5rem 1.5rem 0.5rem 0;
+    }
+
+}
+
+@media (max-width: 40rem) {
+    .dataSearch {
+        min-width: 35rem;
+        left: 0;
+    }
+}

@@ -1,27 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --color-blue-1: #1e90ff;
+    --color-main-1: rgba(0, 179, 79, 255);
+    --color-main-2: rgba(42, 232, 125, 255);
+    --color-main-3: #b7f7d2;
+    --color-light-1: #ffffff;
+    --color-light-2: #f5f8fa;
+    --color-dark-1: #000000;
+    --color-dark-2: #00000039;
+    --color-dark-3: #29272b;
+    --color-red-1: #e55a55;
+    --box-shadow-1: rgba(0, 0, 0, 0.075) 0px 1px 3px,
+        rgba(0, 0, 0, 0.137) 0px 1px 2px;
+    /* DashBoard */
+    --color-dark-4: #222529;
+    --color-dark-5: #383b3e;
+    --color-dark-6: #ececee;
+    --color-light-3: #9ea0a6;
+    --color-light-4: #F5F5F5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    direction: rtl;
+    font-size: 62.5%;
+    background-color: var(--color-light-2);
+    font-family: 'Tajawal', sans-serif;
+    color: var(--color-dark-3);
+
 }
+
+body{
+  padding-top: 10dvh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+
+.mainContainer{
+  width: 99%;
+  max-width: 140rem;
+  margin: auto;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-light-1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-main-1);
+    border-radius: 10px;
+}
+
+
+@media (max-width: 65rem) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* ------------- */

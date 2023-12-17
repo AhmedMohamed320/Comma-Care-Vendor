@@ -1,0 +1,27 @@
+.section {
+    padding: 1rem;
+    background-color: var(--color-light-1);
+    border-radius: 1rem;
+}
+
+.section >p{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.section div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+}
+
+.offer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.offer img {
+    width: 100%;
+}

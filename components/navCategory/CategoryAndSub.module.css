@@ -1,0 +1,65 @@
+.section {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 100;
+}
+
+.section>ul {
+    border: 1px solid var(--color-dark-2);
+    width: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.section>ul li {
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-dark-3);
+    background-color: rgb(245, 245, 245)
+}
+
+.section>ul li a {
+    padding: 1rem;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section>ul li:hover {
+    background-color: var(--color-main-3);
+}
+
+.section>ul li ul {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: all 0.3s;
+    background-color: transparent;
+    padding-left: 0;
+    display: none;
+    flex-direction: column;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+.section>ul li ul li {
+    font-size: 1.4rem;
+}
+
+.section>ul li ul li{
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    border-bottom: none;
+    
+}
+
+.section>ul li ul li:last-of-type{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+    
+}
+.section>ul li:hover ul {
+    display: flex;
+}
