@@ -52,8 +52,7 @@ const Aside = (props) => {
                                 alt="comma care logo"
                             />
                             <p>
-                                مرحبا
-                                محمد
+                                مرحبا محمد
                                 {/* {cookies.token && (
                                     <span> {props.userData.fullName}</span>
                                 )} */}
@@ -115,7 +114,25 @@ const Aside = (props) => {
                         </div>
                     </div>
                     <ul>
-                        {props.data?.data.map((category) => {
+                        <li>
+                            <div>
+                                <p>قسم</p>
+                                <MdOutlineKeyboardArrowDown
+                                    className={classes.iconEdit}
+                                />
+                            </div>
+                            <ul>
+                                <li
+                                    className="px-8"
+                                    onClick={props.onHideAside}
+                                >
+                                    <Link href={`/test/test`}>
+                                        <p>قسم</p>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
+                        {/* {props.data?.data.map((category) => {
                             const categoryID = `showSubCategory_${category.id}`;
                             const isSubCategoriesVisible =
                                 showSubCategories[categoryID];
@@ -146,11 +163,6 @@ const Aside = (props) => {
                                                             }
                                                             className="px-8"
                                                         >
-                                                            {/* <img
-                                                                src="/images/icons8-chevron-left-48.png"
-                                                                alt=""
-                                                            /> */}
-
                                                             <Link
                                                                 href={`/category/${category.name}/${sub.id}/2`}
                                                             >
@@ -166,15 +178,11 @@ const Aside = (props) => {
                                     )}
                                 </li>
                             );
-                        })}
+                        })} */}
                     </ul>
                     <div>
                         <div onClick={handleOutSide}>
-                            {true ? (
-                                <p>تسجيل الخروج</p>
-                            ) : (
-                                <p>تسجيل الدخول</p>
-                            )}
+                            {true ? <p>تسجيل الخروج</p> : <p>تسجيل الدخول</p>}
                             <MdLogout />
                         </div>
                     </div>
