@@ -1,5 +1,5 @@
 import MainNav from "@/components/mainNav/MainNav";
-import "./globals.css";
+import "../globals.css";
 import NavCategory from "@/components/navCategory/NavCategory";
 import Footer from "@/components/footer/Footer";
 

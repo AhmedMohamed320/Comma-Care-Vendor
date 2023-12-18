@@ -13,9 +13,7 @@ const Footer = () => {
                 <footer className={`mainContainer ${classes.footer}`}>
                     <div>
                         <p>اقسامنا</p>
-                        <ul>
-                           
-                        </ul>
+                        <ul></ul>
                     </div>
                     <div>
                         <p>خدمة العملاء</p>
@@ -27,9 +25,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link href="/">
-                                    <p>
-                                        سياسية الخصوصيه
-                                    </p>
+                                    <p>سياسية الخصوصيه</p>
                                 </Link>
                             </li>
                             <li>
@@ -39,7 +35,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link href="/">
-                                    <p>خدمة التوصيل  </p>
+                                    <p>خدمة التوصيل </p>
                                 </Link>
                             </li>
                         </ul>
@@ -77,18 +73,6 @@ const Footer = () => {
                         <div className={classes.logo}>
                             <img src="/images/mainLogo.png" alt="logo" />
                         </div>
-                        <p>شهادات الاعتماد</p>
-                        <ul className={classes.ulColRow}>
-                            <li>
-                                <img
-                                    src="/images/VatIcon.webp"
-                                    alt="ضريبه القيمه المضافه"
-                                />
-                            </li>
-                            <li>
-                                <img src="/images/LicensedSales.webp" alt="" />
-                            </li>
-                        </ul>
 
                         {/* <p>طرق الدفع لدينا</p>
                         <ul className={classes.ulColRow}>
@@ -114,7 +98,7 @@ const Footer = () => {
                     </div>
                 </footer>
                 <p className={classes.copyright}>
-                جميع الحقوق محفوظة لدى كوما &copy;
+                    جميع الحقوق محفوظة لدى كوما &copy;
                 </p>
             </section>
         </Fragment>

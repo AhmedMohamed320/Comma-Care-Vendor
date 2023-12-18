@@ -5,9 +5,11 @@
 
 :root {
     --color-blue-1: #1e90ff;
-    --color-main-1: rgba(0, 179, 79, 255);
-    --color-main-2: rgba(42, 232, 125, 255);
-    --color-main-3: #b7f7d2;
+    --color-main-1: #00b34f;
+    --color-main-2: #2ae87c;
+    --color-main-3: #6ce8a2;
+    --color-main-4: #b7f7d2;
+    --color-main-5: #deede4;
     --color-light-1: #ffffff;
     --color-light-2: #f5f8fa;
     --color-dark-1: #000000;
@@ -19,7 +21,7 @@
     /* DashBoard */
     --color-dark-4: #222529;
     --color-dark-5: #383b3e;
-    --color-dark-6: #ececee;
+    --color-dark-6: #474747ef;
     --color-light-3: #9ea0a6;
     --color-light-4: #F5F5F5;
 }
@@ -36,23 +38,23 @@ body {
     font-size: 62.5%;
     background-color: var(--color-light-2);
     font-family: 'Tajawal', sans-serif;
-    color: var(--color-dark-3);
+    color: var(--color-dark-4);
 
 }
 
-body{
-  padding-top: 10dvh;
-  min-height: 100dvh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+body {
+    padding-top: 10dvh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 
-.mainContainer{
-  width: 99%;
-  max-width: 140rem;
-  margin: auto;
-  position: relative;
+.mainContainer {
+    width: 99%;
+    max-width: 140rem;
+    margin: auto;
+    position: relative;
 }
 
 ::-webkit-scrollbar {

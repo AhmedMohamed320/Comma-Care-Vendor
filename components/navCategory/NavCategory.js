@@ -20,49 +20,46 @@ const NavCategory = (props) => {
 
     return (
         <Fragment>
-            <div className={classes.up}>
-                <section className={`mainContainer ${classes.section}`}>
-                    <div
-                        className={classes.allCategoryAndSub}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                    >
-                        <TbCategory className={classes.iconEdit1} />
-                        <p>جميع الأقسام</p>
-                        <BsFillCaretDownFill className="text-2xl " />
-                        {showComponent && <CategoryAndSub data={props.data} />}
-                    </div>
-                    <ul>
-                        <li>قسم</li>
-                        <li>قسم</li>
-                        <li>قسم</li>
-                        <li>قسم</li>
-                    </ul>
-                    <div className="w-full flex justify-end">
-                        <div className={`${classes.upSearchDiv}`}>
-                            <div className={classes.search}>
-                                <input
-                                    type="text"
-                                    placeholder="ابحث عن ما تريده"
-                                    // onChange={handleSearch}
-                                    // value={searchValue}
-                                />
-                                {loading ? (
-                                    <div className="w-6 h-6">
-                                        <img
-                                            src="/images/loading.gif"
-                                            alt=""
-                                            className="w-full h-full"
-                                        />
-                                    </div>
-                                ) : (
-                                    <IoSearch className={classes.iconEdit} />
-                                )}
-                            </div>
+            <section className={`mainContainer ${classes.section}`}>
+                <div
+                    className={classes.allCategoryAndSub}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <TbCategory className={classes.iconEdit1} />
+                    <p>جميع الأقسام</p>
+                    <BsFillCaretDownFill className="text-2xl " />
+                    {showComponent && <CategoryAndSub data={props.data} />}
+                </div>
+                <ul>
+                    <li>
+                        <Link href="/test/test">قسم</Link>
+                    </li>
+                </ul>
+                <div className="w-full flex justify-end">
+                    <div className={`${classes.upSearchDiv}`}>
+                        <div className={classes.search}>
+                            <input
+                                type="text"
+                                placeholder="ابحث عن ما تريده"
+                                // onChange={handleSearch}
+                                // value={searchValue}
+                            />
+                            {loading ? (
+                                <div className="w-6 h-6">
+                                    <img
+                                        src="/images/loading.gif"
+                                        alt=""
+                                        className="w-full h-full"
+                                    />
+                                </div>
+                            ) : (
+                                <IoSearch className={classes.iconEdit} />
+                            )}
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </Fragment>
     );
 };

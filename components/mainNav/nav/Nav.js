@@ -33,14 +33,14 @@ const Nav = (props) => {
     const [productData, setData] = useState([]);
 
     //--------------------
-    // const handleLogout = () => {
-    //     try {
-    //         removeCookie("token");
-    //         router.push("/");
-    //     } catch (error) {
-    //         console.error("Error occurred while logging out:", error);
-    //     }
-    // };
+    const handleLogout = () => {
+        // try {
+        //     removeCookie("token");
+        //     router.push("/");
+        // } catch (error) {
+        //     console.error("Error occurred while logging out:", error);
+        // }
+    };
 
     // ---------------------------
     const [availableCookies, setAvailableCookies] = useState(false);
@@ -55,7 +55,7 @@ const Nav = (props) => {
                     </Link>
                     <ul>
                         <li>
-                            {!availableCookies ? (
+                            {false ? (
                                 <Link href="/" className={classes.link}>
                                     <div>
                                         <p>تسجيل الدخول | التسجيل</p>
@@ -95,12 +95,12 @@ const Nav = (props) => {
                                         <div className={classes.pop}>
                                             <ul>
                                                 <li>
-                                                    <Link href="/user_dashboard">
+                                                    <Link href="/">
                                                         لوحه التحكم{" "}
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/user_dashboard/orders">
+                                                    <Link href="/">
                                                         عرض الطلبات
                                                     </Link>
                                                 </li>
@@ -136,7 +136,7 @@ const Nav = (props) => {
                         <li>
                             <Link href="/">
                                 <div>
-                                    <p>اعرض منتجاتك</p>
+                                    <p>طلباتك</p>
                                     <div className={classes.cart}>
                                         <CgShoppingBag
                                             className={classes.iconEdit}

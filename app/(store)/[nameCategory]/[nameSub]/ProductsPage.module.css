@@ -1,0 +1,16 @@
+.part2 {
+    display: grid;
+    grid-template-columns: 27rem 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 40rem) {
+    .part2{
+    grid-template-columns: 1fr;
+        
+    }
+    .filterDiv{
+        display: none;
+    }
+}

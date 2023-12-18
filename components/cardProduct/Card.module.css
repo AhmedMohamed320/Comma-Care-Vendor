@@ -1,0 +1,64 @@
+.section {
+    background-color: var(--color-light-1);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    max-width: 25rem;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 15rem;
+}
+
+.img img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.details .sub {
+    font-size: 1.2rem;
+}
+
+.details>p {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.details p span {
+    font-weight: 500;
+    color: var(--color-dark-6);
+}
+
+.makeOrder input {
+    background-color: var(--color-light-2);
+    border: 1px solid var(--color-light-3);
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.35rem;
+}
+
+.makeOrder button{
+    background-color: var(--color-dark-5);
+    color: var(--color-light-2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+}
