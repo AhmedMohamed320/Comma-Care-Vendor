@@ -10,10 +10,10 @@ const MobileFilter = (props) => {
             <section className={` ${classes.section}`}>
                 <div>
                     <ButtonClose click={props.hide} />
-                    <p>تصفيه</p>
-                    <BiFilterAlt />
                 </div>
-                <Filter  onFilter={props.onFilter}/>
+                <div className="w-full">
+                    <Filter onFilter={props.onFilter} />
+                </div>
             </section>
         </Fragment>
     );

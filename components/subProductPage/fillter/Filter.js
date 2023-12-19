@@ -1,12 +1,10 @@
 "use client";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import classes from "./Filter.module.css";
-import axios from "axios";
 
 const Filter = (props) => {
-    const [showFilters, setShowFilters] = useState({
-    });
+    const [showFilters, setShowFilters] = useState({});
 
     function handleFilterClick(filter) {
         setShowFilters((prevShowFilters) => ({
@@ -14,47 +12,16 @@ const Filter = (props) => {
             [filter]: !prevShowFilters[filter],
         }));
     }
-
-    const [form, setForm] = useState({
-        priceFrom: 0,
-        priceTo: 0,
-        brandId: 0,
-    });
-
     const [showBtn, setShowBtn] = useState(false);
-
-    // function handleChangeForm(e) {
-    //     let num = +e.target.value;
-    //     setForm({ ...form, [e.target.name]: num });
-    //     setShowBtn(true);
-    // }
-
-    // // -------------------------
-
-    // const [allBrand, setAllBrand] = useState([]);
-    // useEffect(() => {
-    //     axios
-    //         .get(`${process.env.NEXT_PUBLIC_BASEURL}/comma/brand/getAllBrands`)
-    //         .then((res) => {
-    //             setAllBrand(res.data.data);
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //         });
-    // }, []);
-
-    // // -------------------------
-
-    // function handleBrandChange(event) {
-    //     const selectedId = +event.target.id;
-    //     form.brandId = selectedId;
-    //     setShowBtn(true);
-    // }
-
+    function handleChangeForm(e) {
+        setShowBtn(true);
+    }
     return (
         <Fragment>
             <section className={classes.section}>
-                <p className="pb-4 font-semibold">فلتر المنتجات</p>
+                <p className="pb-4 pt-2 text-3xl text-center font-medium">
+                    فلتر المنتجات
+                </p>
                 <ul>
                     <li>
                         <div
@@ -68,7 +35,13 @@ const Filter = (props) => {
                                 <p>من</p>
                                 <input type="number" name="priceFrom" />
                                 <p>الى</p>
-                                <input type="number" name="priceTo" />
+                                <input
+                                    type="number"
+                                    name="priceTo"
+                                    onChange={(e) => {
+                                        handleChangeForm(e);
+                                    }}
+                                />
                             </div>
                         )}
                     </li>
@@ -86,7 +59,12 @@ const Filter = (props) => {
                                 <ul>
                                     <li>
                                         <label>test</label>
-                                        <input type="radio" name="brand" />
+                                        <input
+                                            type="radio"
+                                            onChange={(e) => {
+                                                handleChangeForm(e);
+                                            }}
+                                        />
                                     </li>
                                 </ul>
                             </div>
@@ -94,11 +72,11 @@ const Filter = (props) => {
                     </li>
                     <li>
                         <div
-                            onClick={() => handleFilterClick("showCountryFilter")}
+                            onClick={() =>
+                                handleFilterClick("showCountryFilter")
+                            }
                         >
-                            <p className={classes.headFiltering}>
-                                بلد المنشأ
-                            </p>
+                            <p className={classes.headFiltering}>بلد المنشأ</p>
                             <MdOutlineKeyboardArrowDown />
                         </div>
                         {showFilters.showCountryFilter && (
@@ -106,19 +84,20 @@ const Filter = (props) => {
                                 <ul>
                                     <li>
                                         <label>test</label>
-                                        <input type="radio" name="brand" />
+                                        <input
+                                            type="radio"
+                                            onChange={(e) => {
+                                                handleChangeForm(e);
+                                            }}
+                                        />
                                     </li>
                                 </ul>
                             </div>
                         )}
                     </li>
                     <li>
-                        <div
-                            onClick={() => handleFilterClick("showSubFilter")}
-                        >
-                            <p className={classes.headFiltering}>
-                                الصنف
-                            </p>
+                        <div onClick={() => handleFilterClick("showSubFilter")}>
+                            <p className={classes.headFiltering}>الصنف</p>
                             <MdOutlineKeyboardArrowDown />
                         </div>
                         {showFilters.showSubFilter && (
@@ -126,7 +105,37 @@ const Filter = (props) => {
                                 <ul>
                                     <li>
                                         <label>test</label>
-                                        <input type="radio" name="brand" />
+                                        <input
+                                            type="radio"
+                                            onChange={(e) => {
+                                                handleChangeForm(e);
+                                            }}
+                                        />
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                    </li>
+                    <li>
+                        <div
+                            onClick={() =>
+                                handleFilterClick("showVendorsFilter")
+                            }
+                        >
+                            <p className={classes.headFiltering}>المورد</p>
+                            <MdOutlineKeyboardArrowDown />
+                        </div>
+                        {showFilters.showVendorsFilter && (
+                            <div>
+                                <ul>
+                                    <li>
+                                        <label>test</label>
+                                        <input
+                                            type="radio"
+                                            onChange={(e) => {
+                                                handleChangeForm(e);
+                                            }}
+                                        />
                                     </li>
                                 </ul>
                             </div>

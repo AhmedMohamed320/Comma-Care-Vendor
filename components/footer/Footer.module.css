@@ -1,12 +1,8 @@
 .section {
     background-color: var(--color-light-1);
-    background-image: url("/images/bbburst.svg");
-    background-size: cover;
-    background-position: center;
 }
 
 .footer {
-    margin-top: 2rem;
     padding-top: 1rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);

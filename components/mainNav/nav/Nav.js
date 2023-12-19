@@ -136,7 +136,7 @@ const Nav = (props) => {
                         <li>
                             <Link href="/">
                                 <div>
-                                    <p>طلباتك</p>
+                                    <p>السله</p>
                                     <div className={classes.cart}>
                                         <CgShoppingBag
                                             className={classes.iconEdit}

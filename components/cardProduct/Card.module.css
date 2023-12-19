@@ -9,7 +9,6 @@
     font-size: 1.5rem;
     font-weight: 500;
     position: relative;
-    max-width: 25rem;
 }
 
 .img {
@@ -37,28 +36,48 @@
 }
 
 .details>p {
-    font-weight: 600;
     font-size: 1.4rem;
+    font-weight: 500;
 }
 
 .details p span {
-    font-weight: 500;
     color: var(--color-dark-6);
 }
 
 .makeOrder input {
-    background-color: var(--color-light-2);
-    border: 1px solid var(--color-light-3);
+    border: none;
     outline: none;
+    background-color: transparent;
     padding: 0.5rem;
-    border-radius: 0.5rem;
     font-size: 1.35rem;
 }
 
-.makeOrder button{
-    background-color: var(--color-dark-5);
-    color: var(--color-light-2);
-    padding: 0.5rem;
+.makeOrder input::-webkit-inner-spin-button,
+.makeOrder input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    display: none;
+}
+
+.makeOrder>div {
+    background-color: var(--color-main-5);
     border-radius: 0.5rem;
-    outline: none;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 0.5rem;
+}
+
+.iconEdit {
+    font-size: 2.5rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.3s;
+    color: var(--color-main-1);
+}
+
+.iconEdit.show {
+    opacity: 1;
+
 }

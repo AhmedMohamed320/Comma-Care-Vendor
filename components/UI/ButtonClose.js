@@ -1,11 +1,11 @@
 import React from "react";
 import classes from "./Button.module.css";
-import { GrFormClose } from "react-icons/gr";
+import { TfiClose } from "react-icons/tfi";
 
 const ButtonClose = (props) => {
     return (
         <div className={classes.close} onClick={props.click}>
-            <GrFormClose />
+            <TfiClose />
         </div>
     );
 };

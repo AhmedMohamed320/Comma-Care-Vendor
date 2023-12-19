@@ -3,18 +3,18 @@
     padding: 0.5rem;
     border-radius: 0.5rem;
     font-size: 1.5rem;
+    border: 1px solid var(--color-dark-2);
 }
 .section ul {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    list-style: none;
 }
 
 .section > ul li {
     background-color: var(--color-main-5);
     border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding:  1rem;
     font-size: 1.4rem;
     font-weight: 500;
     display: flex;
@@ -32,6 +32,7 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    font-size: 2.2rem;
 }
 
 .section ul li > div:nth-of-type(2) {
@@ -74,12 +75,12 @@
 }
 
 .confirm{
-    background-color: var(--color-main-2);
+    background-color: var(--color-dark-5);
     padding: 0.5rem 2rem ;
     color: var(--color-light-2);
     outline: none;
-    border: 1px solid var(--color-main-3);
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     font-size: 1.4rem;
     font-weight: 500;
+    width: 100%;
 }

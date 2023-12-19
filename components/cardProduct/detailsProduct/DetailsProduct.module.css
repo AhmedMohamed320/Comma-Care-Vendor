@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 1rem 0;
 }
 
 .section .part1 {
@@ -13,173 +14,90 @@
     border-radius: 1rem;
     position: relative;
 }
-.section .part1 > div:nth-of-type(1) {
+
+.section .part1>div:nth-of-type(1) {
     overflow: hidden !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.section .part1 > div:nth-of-type(2) {
+
+.section .part1>div:nth-of-type(1) img{
+    width: 70%;
+    max-width: 40rem;
+}
+
+.section .part1>div:nth-of-type(2) {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     font-size: 1.6rem;
     font-weight: 500;
 }
 
-.offer {
-    width: 100%;
-    text-align: center;
-    background-color: #ff375f;
-    color: var(--color-light-1);
-    border-radius: 0.3rem;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-}
-
 .brand {
-    color: rgba(3, 3, 3, 0.65);
-}
-
-.name > p:nth-of-type(2) {
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.price {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 2rem;
-    font-weight: 600;
-}
-.price > p:nth-of-type(2) {
-    color: var(--color-dark-2);
-    text-decoration: line-through;
-}
-
-.available,
-.unAvailable {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.available > div,
-.unAvailable > div {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--color-main-2);
-    border-radius: 50%;
-    color: var(--color-light-1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-}
-
-.unAvailable > div {
-    background-color: var(--color-red-1);
-}
-
-.available p {
-    color: var(--color-main-2) !important;
-    font-weight: 600;
-}
-.unAvailable > p {
-    color: var(--color-red-1) !important;
-    font-weight: 600;
-}
-.rate {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.rate ul {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    list-style: none;
-}
-.rate ul li img {
-    width: 3rem;
-}
-
-.deliver {
-    background-color: var(--color-main-3);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    border-radius: 0.5rem;
-    width: fit-content;
-    padding: 1.5rem;
-    font-weight: 600;
-}
-
-.deliver > :nth-child(1) {
-    color: var(--color-main-1);
-    font-size: 2.2rem;
-}
-
-.cart,
-.cart > div {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.cart > div {
-    border: 1px solid var(--color-main-2);
-    height: 100%;
-    border-radius: 0.5rem;
-}
-
-.cart > div > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 4rem;
-    height: 100%;
-}
-
-.cart > div > div:not(:nth-of-type(2)) {
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.cart > div > div:not(:nth-of-type(2)):hover {
-    background-color: var(--color-main-2);
-}
-
-.part2 {
-    background-color: var(--color-main-3);
-    border-radius: 1rem;
-    padding: 1rem;
-}
-
-.part2 {
+    color: var(--color-light-3);
     font-size: 1.4rem;
 }
 
-.part2 > p:nth-of-type(1) {
-    font-size: 1.8rem;
-}
-
-.part2 > pre {
-    white-space: pre-wrap;
-}
-
-.part3 > p {
-    font-size: 2.5rem;
+.name>p:nth-of-type(2) {
+    font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 2rem;
 }
 
-.part3 > div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 2rem;
+.description {
+    background-color: var(--color-main-5);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
 }
 
-.notEnough{
-    color: var(--color-red-1);
+.details>p {
+    font-weight: 500;
     font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.details p span {
+    font-size: 1.4rem;
+    color: var(--color-dark-6);
+}
+
+.makeOrder input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0.5rem;
+    font-size: 1.35rem;
+}
+
+.makeOrder input::-webkit-inner-spin-button,
+.makeOrder input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    display: none;
+}
+
+.makeOrder>div {
+    max-width: 30rem;
+    border: 1px solid var(--color-main-5);
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 0.5rem;
+}
+
+.iconEdit {
+    font-size: 2.5rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.3s;
+    color: var(--color-main-1);
+}
+
+.iconEdit.show {
+    opacity: 1;
+
 }
