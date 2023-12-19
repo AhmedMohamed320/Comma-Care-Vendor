@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation";
 // import { useCookies } from "react-cookie";
 import { IoPersonOutline } from "react-icons/io5";
 import { CgShoppingBag } from "react-icons/cg";
+import { PiChats } from "react-icons/pi";
 
 const Aside = (props) => {
     const router = useRouter();
@@ -71,10 +72,10 @@ const Aside = (props) => {
                                 </li>
                                 <li onClick={props.onHideAside}>
                                     <Link href="/">
-                                        <MdOutlineDeliveryDining
+                                        <PiChats
                                             className={classes.iconEdit}
                                         />
-                                        <p>الطلبات</p>
+                                        <p>المفاوضات</p>
                                     </Link>
                                 </li>
                                 <li onClick={props.onHideAside}>

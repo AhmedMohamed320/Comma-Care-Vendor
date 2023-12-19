@@ -5,6 +5,7 @@ import axios from "axios";
 // import { useRouter } from "next/navigation";
 import Nav from "./nav/Nav";
 import Aside from "./aside/Aside";
+import NavCategory from "./navCategory/NavCategory";
 
 const MainNav = (props) => {
     // const [cookies] = useCookies(["token"]);
@@ -45,6 +46,7 @@ const MainNav = (props) => {
                         // userData={userData}
                     />
                 )}
+                <NavCategory />
             </div>
         </>
     );

@@ -17,9 +17,10 @@
 .part1>div select {
     outline: none;
     border: none;
-    background-color: var(--color-main-5);
-    padding:0.5rem;
-    border-radius: 0.5rem;
+    background-color: var(--color-dark-5);
+    color: var(--color-light-2);
+    padding:0.3rem;
+    border-radius: 0.4rem;
     min-width: 25rem;
 }
 

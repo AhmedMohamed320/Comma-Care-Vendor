@@ -1,6 +1,5 @@
 import MainNav from "@/components/mainNav/MainNav";
 import "../globals.css";
-import NavCategory from "@/components/navCategory/NavCategory";
 import Footer from "@/components/footer/Footer";
 
 export const metadata = {
@@ -14,7 +13,6 @@ export default function RootLayout({ children }) {
             <body>
                 <div>
                     <MainNav />
-                    <NavCategory />
                 </div>
                 <div>{children}</div>
                 <div>

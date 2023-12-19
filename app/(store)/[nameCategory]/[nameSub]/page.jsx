@@ -1,9 +1,9 @@
 "use client";
 import React, { Fragment, useState, useEffect } from "react";
 import classes from "./ProductsPage.module.css";
-import Filter from "@/components/subProductPage/fillter/Filter";
-import AllProduct from "@/components/subProductPage/allProduct/AllProduct";
-import MobileFilter from "@/components/subProductPage/fillter/MobileFilter";
+import MobileFilter from "@/components/Pages/subProductPage/fillter/MobileFilter";
+import Filter from "@/components/Pages/subProductPage/fillter/Filter";
+import AllProduct from "@/components/Pages/subProductPage/allProduct/AllProduct";
 
 const ProductsPage = (props) => {
     const [showComponent, setShowComponent] = useState(false);

@@ -6,10 +6,10 @@ import { RxTextAlignJustify } from "react-icons/rx";
 import { AiOutlineHeart } from "react-icons/ai";
 import {
     MdOutlineKeyboardArrowDown,
-    MdKeyboardArrowUp,
-    MdLanguage,
+    MdKeyboardArrowUp
 } from "react-icons/md";
-import { Fragment, useEffect, useState } from "react";
+import { PiChats } from "react-icons/pi";
+import { Fragment ,useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 // import { useCookies } from "react-cookie";
@@ -29,8 +29,6 @@ const Nav = (props) => {
     const handleMouseLeave = () => {
         setShowComponent(false);
     };
-
-    const [productData, setData] = useState([]);
 
     //--------------------
     const handleLogout = () => {
@@ -129,6 +127,25 @@ const Nav = (props) => {
                                     />
                                 </div>
                             </Link>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>
+                            <Link href="/">
+                                <div>
+                                    <p>المفاوضات</p>
+                                    <PiChats
+                                        className={classes.iconEdit}
+                                    />
+                                </div>
+                            </Link>
+                            <div
+                                className={classes.iconShowAside}
+                                onClick={props.onShowAside}
+                            >
+                                <RxTextAlignJustify />
+                            </div>
                         </li>
                         <li>
                             <span></span>
