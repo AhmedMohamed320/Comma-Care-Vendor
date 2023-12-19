@@ -55,9 +55,9 @@ const DetailsProduct = (props) => {
                             </p>
                         </div>
                         <div
-                            className={`py-2 flex flex-col gap-2 ${classes.makeOrder}`}
+                            className={`py-2 flex items-center gap-2 ${classes.makeOrder}`}
                         >
-                            <p>ادخل الكميه المطلوبه</p>
+                            <p>ادخل الكميه المطلوبه : </p>
                             <div>
                                 <input
                                     type="number"

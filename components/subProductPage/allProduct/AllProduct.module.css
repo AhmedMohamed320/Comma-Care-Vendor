@@ -27,6 +27,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .iconFilter {
@@ -35,7 +36,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: var(--color-main-1);
 }
 
 .pagination {

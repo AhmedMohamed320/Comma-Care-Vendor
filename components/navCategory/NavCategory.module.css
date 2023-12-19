@@ -136,10 +136,11 @@
     .allCategoryAndSub {
         display: none;
     }
-.section{
-    background-color: transparent;
-    padding:0 1rem;
-}
+
+    .section {
+        background-color: transparent;
+    }
+
     .upSearchDiv .search {
         padding: 1rem;
     }
