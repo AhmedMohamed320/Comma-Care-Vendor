@@ -1,7 +1,6 @@
 "use client";
 import classes from "./Nav.module.css";
 import { IoPersonOutline } from "react-icons/io5";
-import { CgShoppingBag } from "react-icons/cg";
 import { RxTextAlignJustify } from "react-icons/rx";
 import { AiOutlineHeart } from "react-icons/ai";
 import {
@@ -14,6 +13,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 // import { useCookies } from "react-cookie";
 import axios from "axios";
+import { LiaShippingFastSolid } from "react-icons/lia";
 
 const Nav = (props) => {
     const router = useRouter();
@@ -121,7 +121,7 @@ const Nav = (props) => {
                         <li>
                             <Link href="/">
                                 <div>
-                                    <p>عن خدماتنا</p>
+                                    <p>خدماتنا</p>
                                     <AiOutlineHeart
                                         className={classes.iconEdit}
                                     />
@@ -132,7 +132,7 @@ const Nav = (props) => {
                             <span></span>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="/negotiation">
                                 <div>
                                     <p>المفاوضات</p>
                                     <PiChats
@@ -153,9 +153,11 @@ const Nav = (props) => {
                         <li>
                             <Link href="/">
                                 <div>
-                                    <p>السله</p>
+                                    <p>
+                                        الطلبات
+                                    </p>
                                     <div className={classes.cart}>
-                                        <CgShoppingBag
+                                        <LiaShippingFastSolid
                                             className={classes.iconEdit}
                                         />
                                     </div>

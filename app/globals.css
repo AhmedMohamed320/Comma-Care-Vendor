@@ -13,7 +13,7 @@
     --color-light-1: #ffffff;
     --color-light-2: #f5f8fa;
     --color-dark-1: #000000;
-    --color-dark-2: #00000039;
+    --color-dark-2: #0000001f;
     --color-dark-3: #29272b;
     --color-red-1: #e55a55;
     --box-shadow-1: rgba(0, 0, 0, 0.075) 0px 1px 3px,
@@ -52,14 +52,13 @@ body {
 
 .mainContainer {
     width: 98%;
-    max-width: 140rem;
+    max-width: 155rem;
     margin: auto;
     position: relative;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -68,7 +67,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--color-main-1);
-    border-radius: 10px;
 }
 
 

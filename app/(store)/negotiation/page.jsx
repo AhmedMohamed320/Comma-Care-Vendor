@@ -1,9 +1,12 @@
-import React from 'react'
+import Negotiations from "@/components/Pages/negotiation/Negotiations";
+import React from "react";
 
 const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+    return (
+        <>
+            <Negotiations />
+        </>
+    );
+};
 
-export default page
+export default page;
