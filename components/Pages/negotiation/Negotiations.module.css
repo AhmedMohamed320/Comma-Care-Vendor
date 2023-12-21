@@ -18,21 +18,19 @@
     border-right: 1px solid var(--color-dark-2);
 }
 
-.head {
-    height: 5rem;
-}
-
 /* ------------------ */
-.part1{
+.part1 {
     display: grid;
-    grid-template-rows: auto auto 70vh;
+    grid-template-rows: auto auto 1fr;
+    padding-bottom: 1rem;
 }
 
-.part1 .head {
+.part1>.head {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 1rem;
     padding: 1rem;
+    height: 5rem;
 }
 
 .part1 .search {
@@ -60,61 +58,112 @@
     outline: none;
     background-color: transparent;
 }
-.allNegotiation{
-    padding: 0 1rem ;
+
+.allNegotiation {
+    padding: 0 1rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
+.containerVendorData {
+    background-color: var(--color-dark-4);
+    color: var(--color-light-2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.vendors {
+    overflow: hidden;
+}
+
+.vendors>ul {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-bottom: 1rem;
     overflow-y: auto;
 }
-.allNegotiation>p{
+
+.vendors>p {
     font-size: 1.8rem;
     font-weight: 500;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
-.allNegotiation >ul{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.allNegotiation >ul li{
-    display: flex;
-    gap: 1rem;
-}
-
-.allNegotiation >ul li .image{
+.vendors>ul li .image,
+.vendorData .head .image {
     min-width: 5rem;
     max-width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    border: 1px solid var(--color-main-5);
+    border: 2px solid var(--color-dark-2);
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.allNegotiation >ul li .image img{
-    width: 100%;
+.vendorData .head {
+    display: flex;
+    gap: 1rem;
 }
 
-.allNegotiation >ul li .details{
-    width: 100%;
-    height: 5.5rem;
-    border-bottom: 1px solid var(--color-dark-2);
+.vendorData .head .image {
+    min-width: 7rem;
+    max-width: 7rem;
+    height: 7rem;
+    border: 2px solid var(--color-main-3);
 }
+
+.toggleVendorData {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+
+}
+
+.toggleVendorData li a {
+    border: 1px solid var(--color-main-4);
+    color: var(--color-light-2);
+    display: inline-block;
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.toggleVendorData li a.active {
+    background-color: var(--color-main-4);
+    color: var(--color-dark-3);
+}
+
+.containerVendorData .view {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+
 
 /* ----------------------- */
 .part2 {
-    background-color: var(--color-dark-4);
     color: var(--color-light-2);
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 70vh;
+    overflow: hidden;
 }
 
 .part2 .head {
+    background-color: var(--color-dark-4);
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     padding: 0 1rem;
     border-bottom: 1px solid var(--color-dark-5);
     height: 6rem;
@@ -135,62 +184,65 @@
     width: 100%;
 }
 
-.input>p{
-    width: 90%;
-    margin: auto;
-    margin-bottom: 1rem;
-    border-radius: 20rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.7rem;
-    font-weight: 500;
-    padding: 0.4rem;
-    background-color: var(--color-main-1);
-}
-
-/* ----------------------- */
-.part3 {
-    display: grid;
-    grid-template-rows: auto auto 70vh;
-}
-
-.part3 .head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-}
-
-.products{
+.products {
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    overflow-y:auto;
+    overflow-y: auto;
+    color: var(--color-dark-3);
 }
 
-.products >div{
+.products>div {
     border: 1px solid var(--color-dark-2);
     border-radius: 0.5rem;
-    background-color: var(--color-main-5);
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.products >div .data{
+.products>div .data {
     border: 1px solid var(--color-dark-2);
     border-radius: 0.4rem;
     background-color: var(--color-light-1);
 }
 
-.products >div ul {
+.products>div ul {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr;
 }
 
-.products >div ul li{
-    padding: 0.5rem ;
+.products>div ul li {
+    padding: 0.5rem;
+}
+
+
+/* ----------------------- */
+.part3 {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    padding: 1rem;
+}
+
+.part3 .head {
+    padding-bottom: 1rem;
+}
+
+.allData{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    background-color: var(--color-main-5);
+    border-radius: 0.5rem;
+}
+
+.allData li{
+    padding: 0.4rem 0;
+}
+
+.allData li>p:nth-of-type(1){
+    font-weight: 500;
 }

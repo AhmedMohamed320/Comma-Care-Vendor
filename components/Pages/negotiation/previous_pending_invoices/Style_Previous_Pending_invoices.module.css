@@ -1,0 +1,10 @@
+.main ul{
+    border-radius: 0.5rem;
+}
+
+.main ul li a{
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid var(--color-light-3);
+    padding: 1rem 0;
+}
