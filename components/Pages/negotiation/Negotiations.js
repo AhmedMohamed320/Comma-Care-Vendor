@@ -317,6 +317,72 @@ const Negotiations = () => {
                                 </p>
                             </div>
                         </div>
+                        <div>
+                            <p className="flex justify-between items-center px-4">
+                                <span className="text-3xl font-medium">
+                                    براند
+                                </span>
+                                <span className="text-xl font-medium">
+                                    عدد المنتجات : 2
+                                </span>
+                            </p>
+                            <div className={classes.data}>
+                                <ul className="font-medium text-2xl">
+                                    <li>المنتج</li>
+                                    <li>الكميه</li>
+                                    <li>السعر</li>
+                                </ul>
+                                <ul className="text-2xl">
+                                    <li>بكر رسم قلب</li>
+                                    <li>50</li>
+                                    <li>10</li>
+                                </ul>
+                                <ul className="text-2xl">
+                                    <li>قسطرة رايل - التراميد</li>
+                                    <li>10</li>
+                                    <li>50</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p className="flex items-center justify-between p-2 text-2xl font-medium">
+                                    <span>الاجمالى:</span>
+                                    <span>4500 ر.س</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <p className="flex justify-between items-center px-4">
+                                <span className="text-3xl font-medium">
+                                    براند
+                                </span>
+                                <span className="text-xl font-medium">
+                                    عدد المنتجات : 2
+                                </span>
+                            </p>
+                            <div className={classes.data}>
+                                <ul className="font-medium text-2xl">
+                                    <li>المنتج</li>
+                                    <li>الكميه</li>
+                                    <li>السعر</li>
+                                </ul>
+                                <ul className="text-2xl">
+                                    <li>بكر رسم قلب</li>
+                                    <li>50</li>
+                                    <li>10</li>
+                                </ul>
+                                <ul className="text-2xl">
+                                    <li>قسطرة رايل - التراميد</li>
+                                    <li>10</li>
+                                    <li>50</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p className="flex items-center justify-between p-2 text-2xl font-medium">
+                                    <span>الاجمالى:</span>
+                                    <span>4500 ر.س</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section className={classes.part3}>

@@ -1,11 +1,17 @@
 .main {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
     background-color: var(--color-light-1);
     border: 1px solid var(--color-main-5);
     border-radius: 0.5rem;
     height: 100%;
     overflow: hidden;
+}
+
+@media (max-width:70rem) {
+    .main{
+    grid-template-columns: 2fr 2fr;
+    }
 }
 
 .part1,
