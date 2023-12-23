@@ -15,6 +15,7 @@ import { useRouter } from "next/navigation";
 import { IoPersonOutline } from "react-icons/io5";
 import { CgShoppingBag } from "react-icons/cg";
 import { PiChats } from "react-icons/pi";
+import { LiaShippingFastSolid } from "react-icons/lia";
 
 const Aside = (props) => {
     const router = useRouter();
@@ -64,14 +65,14 @@ const Aside = (props) => {
                             <ul>
                                 <li onClick={props.onHideAside}>
                                     <Link href="/">
-                                        <CgShoppingBag
+                                        <LiaShippingFastSolid
                                             className={classes.iconEdit}
                                         />
-                                        <p>السله</p>
+                                        <p>الطلبات</p>
                                     </Link>
                                 </li>
                                 <li onClick={props.onHideAside}>
-                                    <Link href="/">
+                                    <Link href="/negotiation">
                                         <PiChats
                                             className={classes.iconEdit}
                                         />
@@ -83,7 +84,7 @@ const Aside = (props) => {
                                         <AiOutlineHeart
                                             className={classes.iconEdit}
                                         />
-                                        <p>المفضله</p>
+                                        <p>خدماتنا</p>
                                     </Link>
                                 </li>
                                 <li onClick={props.onHideAside}>
