@@ -167,14 +167,14 @@
     justify-content: space-between;
     padding: 0 1rem;
     border-bottom: 1px solid var(--color-dark-5);
-    height: 6rem;
+    height: 7rem;
 }
 
 .part2 .head .image {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    border: 1px solid var(--color-dark-5);
+    border: 2px solid var(--color-dark-6);
     overflow: hidden;
     display: flex;
     align-items: center;
