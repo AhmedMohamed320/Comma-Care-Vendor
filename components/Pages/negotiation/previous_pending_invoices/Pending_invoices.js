@@ -19,11 +19,7 @@ const Pending_invoices = () => {
             <ul>
                 <li>
                     <Link
-                        className={
-                            contentVendorDataToggle == "Pending_invoices"
-                                ? classes.active
-                                : ""
-                        }
+                        className={true ? classes.active : ""}
                         href={{
                             pathname: "/negotiation",
                             query: {
@@ -62,7 +58,9 @@ const Pending_invoices = () => {
                             },
                         }}
                     >
-                        <div className="text-xl flex items-center justify-between pb-3">
+                        <div
+                            className={`text-xl flex items-center justify-between pb-3`}
+                        >
                             <p>
                                 رقم الفاتوره /{" "}
                                 <span className="font-semibold">45781</span>

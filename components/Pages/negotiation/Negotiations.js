@@ -1,16 +1,23 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Negotiations.module.css";
 import { IoMdSearch } from "react-icons/io";
 import { IoFilter } from "react-icons/io5";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import VendorChat from "./vendorChat/VendorChat";
 import Pending_invoices from "./previous_pending_invoices/Pending_invoices";
 import Previous_invoices from "./previous_pending_invoices/Previous_invoices";
+import {
+    MdKeyboardDoubleArrowRight,
+    MdOutlineKeyboardDoubleArrowLeft,
+} from "react-icons/md";
 const Negotiations = () => {
     const router = useSearchParams();
-    const contentVendorDataToggle = router.get("vendorData") || "";
+    const router2 = useRouter();
+    const contentVendorDataToggle = router.get("vendorData") || "chat";
+    const [showPart3, setShowPart3] = useState(false);
+    const classPart3 = `${classes.part3} ${showPart3 ? classes.active : ""}`;
     return (
         <div className="py-4 h-full">
             <main className={`mainContainer ${classes.main}`}>
@@ -204,190 +211,173 @@ const Negotiations = () => {
                                 <img src="/images/comma.jpg" alt="image" />
                             </div>
                             <div>
-                                <p className="text-3xl pb-1">
-                                    شركه عالم الدواء
-                                </p>
-                                <p className="text-xl text-gray-400">
-                                    فاتوره رقم :{" "}
-                                    <span className="font-semibold">45781</span>
-                                </p>
+                                <div>
+                                    <p className="text-3xl pb-1">
+                                        شركه عالم الدواء
+                                    </p>
+                                    <p className="text-xl text-gray-400">
+                                        فاتوره رقم :{" "}
+                                        <span className="font-semibold pl-4">
+                                            45781
+                                        </span>
+                                        <span>معلقه</span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div className="text-xl text-gray-400">
-                            <p>معلقه</p>
+                        <div
+                            className={classes.iconActivePart3}
+                            onClick={() => {
+                                setShowPart3(true);
+                            }}
+                        >
+                            <MdKeyboardDoubleArrowRight />
                         </div>
                     </div>
-                    <div className={classes.products}>
-                        <div>
-                            <p className="flex justify-between items-center px-4">
-                                <span className="text-3xl font-medium">
-                                    براند
-                                </span>
-                                <span className="text-xl font-medium">
-                                    عدد المنتجات : 2
-                                </span>
-                            </p>
-                            <div className={classes.data}>
-                                <ul className="font-medium text-2xl">
-                                    <li>المنتج</li>
-                                    <li>الكميه</li>
-                                    <li>السعر</li>
-                                </ul>
-                                <ul className="text-2xl">
-                                    <li>بكر رسم قلب</li>
-                                    <li>50</li>
-                                    <li>10</li>
-                                </ul>
-                                <ul className="text-2xl">
-                                    <li>قسطرة رايل - التراميد</li>
-                                    <li>10</li>
-                                    <li>50</li>
-                                </ul>
+                    <div className="overflow-y-auto">
+                        <div className={classes.products}>
+                            <div>
+                                <div className="flex justify-between items-center">
+                                    <p className="text-3xl font-medium">
+                                        اسم البراند
+                                    </p>
+                                    <p className="flex flex-col text-gray-300">
+                                        <span className="text-xl ">
+                                            عدد المنتجات : 2
+                                        </span>
+                                        <span className="text-xl">
+                                            الاجمالى : 4500 ر.س
+                                        </span>
+                                    </p>
+                                </div>
+                                <div className={classes.data}>
+                                    <ul className="font-medium text-2xl">
+                                        <li>المنتج</li>
+                                        <li>الكميه</li>
+                                        <li>السعر</li>
+                                    </ul>
+                                    <ul className="text-2xl">
+                                        <li>بكر رسم قلب</li>
+                                        <li>50</li>
+                                        <li>10</li>
+                                    </ul>
+                                    <ul className="text-2xl">
+                                        <li>قسطرة رايل - التراميد</li>
+                                        <li>10</li>
+                                        <li>50</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div>
-                                <p className="flex items-center justify-between p-2 text-2xl font-medium">
-                                    <span>الاجمالى:</span>
-                                    <span>4500 ر.س</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <p className="flex justify-between items-center px-4">
-                                <span className="text-3xl font-medium">
-                                    براند
-                                </span>
-                                <span className="text-xl font-medium">
-                                    عدد المنتجات : 2
-                                </span>
-                            </p>
-                            <div className={classes.data}>
-                                <ul className="font-medium text-2xl">
-                                    <li>المنتج</li>
-                                    <li>الكميه</li>
-                                    <li>السعر</li>
-                                </ul>
-                                <ul className="text-2xl">
-                                    <li>بكر رسم قلب</li>
-                                    <li>50</li>
-                                    <li>10</li>
-                                </ul>
-                                <ul className="text-2xl">
-                                    <li>قسطرة رايل - التراميد</li>
-                                    <li>10</li>
-                                    <li>50</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <p className="flex items-center justify-between p-2 text-2xl font-medium">
-                                    <span>الاجمالى:</span>
-                                    <span>4500 ر.س</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <p className="flex justify-between items-center px-4">
-                                <span className="text-3xl font-medium">
-                                    براند
-                                </span>
-                                <span className="text-xl font-medium">
-                                    عدد المنتجات : 2
-                                </span>
-                            </p>
-                            <div className={classes.data}>
-                                <ul className="font-medium text-2xl">
-                                    <li>المنتج</li>
-                                    <li>الكميه</li>
-                                    <li>السعر</li>
-                                </ul>
-                                <ul className="text-2xl">
-                                    <li>بكر رسم قلب</li>
-                                    <li>50</li>
-                                    <li>10</li>
-                                </ul>
-                                <ul className="text-2xl">
-                                    <li>قسطرة رايل - التراميد</li>
-                                    <li>10</li>
-                                    <li>50</li>
-                                </ul>
+                                <div className="flex justify-between items-center">
+                                    <p className="text-3xl font-medium">
+                                        اسم البراند
+                                    </p>
+                                    <p className="flex flex-col text-gray-300">
+                                        <span className="text-xl ">
+                                            عدد المنتجات : 2
+                                        </span>
+                                        <span className="text-xl">
+                                            الاجمالى : 4500 ر.س
+                                        </span>
+                                    </p>
+                                </div>
+                                <div className={classes.data}>
+                                    <ul className="font-medium text-2xl">
+                                        <li>المنتج</li>
+                                        <li>الكميه</li>
+                                        <li>السعر</li>
+                                    </ul>
+                                    <ul className="text-2xl">
+                                        <li>بكر رسم قلب</li>
+                                        <li>50</li>
+                                        <li>10</li>
+                                    </ul>
+                                    <ul className="text-2xl">
+                                        <li>قسطرة رايل - التراميد</li>
+                                        <li>10</li>
+                                        <li>50</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div>
-                                <p className="flex items-center justify-between p-2 text-2xl font-medium">
-                                    <span>الاجمالى:</span>
-                                    <span>4500 ر.س</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <p className="flex justify-between items-center px-4">
-                                <span className="text-3xl font-medium">
-                                    براند
-                                </span>
-                                <span className="text-xl font-medium">
-                                    عدد المنتجات : 2
-                                </span>
-                            </p>
-                            <div className={classes.data}>
-                                <ul className="font-medium text-2xl">
-                                    <li>المنتج</li>
-                                    <li>الكميه</li>
-                                    <li>السعر</li>
-                                </ul>
-                                <ul className="text-2xl">
-                                    <li>بكر رسم قلب</li>
-                                    <li>50</li>
-                                    <li>10</li>
-                                </ul>
-                                <ul className="text-2xl">
-                                    <li>قسطرة رايل - التراميد</li>
-                                    <li>10</li>
-                                    <li>50</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <p className="flex items-center justify-between p-2 text-2xl font-medium">
-                                    <span>الاجمالى:</span>
-                                    <span>4500 ر.س</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <p className="flex justify-between items-center px-4">
-                                <span className="text-3xl font-medium">
-                                    براند
-                                </span>
-                                <span className="text-xl font-medium">
-                                    عدد المنتجات : 2
-                                </span>
-                            </p>
-                            <div className={classes.data}>
-                                <ul className="font-medium text-2xl">
-                                    <li>المنتج</li>
-                                    <li>الكميه</li>
-                                    <li>السعر</li>
-                                </ul>
-                                <ul className="text-2xl">
-                                    <li>بكر رسم قلب</li>
-                                    <li>50</li>
-                                    <li>10</li>
-                                </ul>
-                                <ul className="text-2xl">
-                                    <li>قسطرة رايل - التراميد</li>
-                                    <li>10</li>
-                                    <li>50</li>
-                                </ul>
+                                <div className="flex justify-between items-center">
+                                    <p className="text-3xl font-medium">
+                                        اسم البراند
+                                    </p>
+                                    <p className="flex flex-col text-gray-300">
+                                        <span className="text-xl ">
+                                            عدد المنتجات : 2
+                                        </span>
+                                        <span className="text-xl">
+                                            الاجمالى : 4500 ر.س
+                                        </span>
+                                    </p>
+                                </div>
+                                <div className={classes.data}>
+                                    <ul className="font-medium text-2xl">
+                                        <li>المنتج</li>
+                                        <li>الكميه</li>
+                                        <li>السعر</li>
+                                    </ul>
+                                    <ul className="text-2xl">
+                                        <li>بكر رسم قلب</li>
+                                        <li>50</li>
+                                        <li>10</li>
+                                    </ul>
+                                    <ul className="text-2xl">
+                                        <li>قسطرة رايل - التراميد</li>
+                                        <li>10</li>
+                                        <li>50</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div>
-                                <p className="flex items-center justify-between p-2 text-2xl font-medium">
-                                    <span>الاجمالى:</span>
-                                    <span>4500 ر.س</span>
-                                </p>
+                                <div className="flex justify-between items-center">
+                                    <p className="text-3xl font-medium">
+                                        اسم البراند
+                                    </p>
+                                    <p className="flex flex-col text-gray-300">
+                                        <span className="text-xl ">
+                                            عدد المنتجات : 2
+                                        </span>
+                                        <span className="text-xl">
+                                            الاجمالى : 4500 ر.س
+                                        </span>
+                                    </p>
+                                </div>
+                                <div className={classes.data}>
+                                    <ul className="font-medium text-2xl">
+                                        <li>المنتج</li>
+                                        <li>الكميه</li>
+                                        <li>السعر</li>
+                                    </ul>
+                                    <ul className="text-2xl">
+                                        <li>بكر رسم قلب</li>
+                                        <li>50</li>
+                                        <li>10</li>
+                                    </ul>
+                                    <ul className="text-2xl">
+                                        <li>قسطرة رايل - التراميد</li>
+                                        <li>10</li>
+                                        <li>50</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section className={classes.part3}>
+                <section className={classPart3}>
                     <div className={classes.head}>
                         <p className="text-4xl font-medium">الفواتير</p>
+                        <div
+                            className={classes.iconUnActivePart3}
+                            onClick={() => {
+                                setShowPart3(false);
+                            }}
+                        >
+                            <MdOutlineKeyboardDoubleArrowLeft />
+                        </div>
                     </div>
                     <div>
                         <ul className={classes.allData}>
@@ -408,9 +398,7 @@ const Negotiations = () => {
                     <div className="py-2">
                         <hr />
                     </div>
-                    <div>
-                        
-                    </div>
+                    <div></div>
                 </section>
             </main>
         </div>
